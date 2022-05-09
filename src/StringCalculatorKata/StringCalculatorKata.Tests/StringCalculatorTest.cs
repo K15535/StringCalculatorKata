@@ -56,4 +56,12 @@ public class StringCalculatorTest
 
         Assert.Equal(6, actual);
     }
+
+    [Fact]
+    public void AddMultipleNumbers_Should_Return_Sum()
+    {
+        var actual = StringCalculator.Add("2,2,3");
+
+        Assert.Equal(7, actual);
+    }
 }

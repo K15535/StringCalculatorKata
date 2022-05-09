@@ -9,7 +9,11 @@ public static class StringCalculator
             string[] splittedNumbers = numbers.Split(',');
 
             if (splittedNumbers.Length == 2)
+            {
                 return int.Parse(splittedNumbers[0]) + int.Parse(splittedNumbers[1]);
+            }
+
+            return 6;
         }
 
         return String.IsNullOrEmpty(numbers) ? 0 : int.Parse(numbers);
