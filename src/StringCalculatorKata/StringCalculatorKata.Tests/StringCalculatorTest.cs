@@ -64,4 +64,12 @@ public class StringCalculatorTest
 
         Assert.Equal(7, actual);
     }
+
+    [Fact]
+    public void AddMultipleNumbersWithCarriageReturn_Should_Return_Sum()
+    {
+        var actual = StringCalculator.Add("2\n2,3");
+
+        Assert.Equal(7, actual);
+    }
 }

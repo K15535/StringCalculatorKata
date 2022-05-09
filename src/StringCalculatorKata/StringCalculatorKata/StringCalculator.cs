@@ -8,12 +8,17 @@ public static class StringCalculator
         {
             string[] splittedNumbers = numbers.Split(',');
 
-            if (splittedNumbers.Length == 2)
+            if (splittedNumbers.Length > 0)
             {
-                return int.Parse(splittedNumbers[0]) + int.Parse(splittedNumbers[1]);
-            }
+                int sum = 0;
 
-            return 6;
+                foreach (string number in splittedNumbers)
+                {
+                    sum += int.Parse(number);
+                }
+
+                return sum;
+            }
         }
 
         return String.IsNullOrEmpty(numbers) ? 0 : int.Parse(numbers);
