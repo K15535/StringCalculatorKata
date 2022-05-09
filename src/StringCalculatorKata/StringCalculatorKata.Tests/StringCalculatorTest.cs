@@ -11,4 +11,12 @@ public class StringCalculatorTest
 
         Assert.Equal(0, actual);
     }
+
+    [Fact]
+    public void OneNumberInString()
+    {
+        var actual = StringCalculator.Add("1");
+
+        Assert.Equal(1, actual);
+    }
 }
