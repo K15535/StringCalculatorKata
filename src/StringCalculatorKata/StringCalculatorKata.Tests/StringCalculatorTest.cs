@@ -40,4 +40,12 @@ public class StringCalculatorTest
 
         Assert.Equal(3, actual);
     }
+
+    [Fact]
+    public void Add_Should_Return_4()
+    {
+        var actual = StringCalculator.Add("2,2");
+
+        Assert.Equal(4, actual);
+    }
 }
