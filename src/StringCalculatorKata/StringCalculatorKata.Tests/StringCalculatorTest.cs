@@ -22,7 +22,7 @@ public class StringCalculatorTest
     }
 
     [Theory]
-    [InlineData("")]
+    [InlineData("0")]
     [InlineData("1")]
     [InlineData("2")]
     [InlineData("3")]
@@ -31,5 +31,13 @@ public class StringCalculatorTest
         var actual = StringCalculator.Add(numbers);
 
         Assert.Equal(numbers, actual.ToString());
+    }
+
+    [Fact]
+    public void Add_Should_AddTwoNumbers()
+    {
+        var actual = StringCalculator.Add("1,2");
+
+        Assert.Equal(3, actual);
     }
 }
