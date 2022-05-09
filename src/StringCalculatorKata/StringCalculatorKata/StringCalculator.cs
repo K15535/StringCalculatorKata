@@ -4,11 +4,14 @@ public static class StringCalculator
 {
     public static int Add(string numbers)
     {
-        if (String.IsNullOrEmpty(numbers))
+        if (numbers.Contains(','))
         {
-            return 0;
+            string[] splittedNumbers = numbers.Split(',');
+
+            if (splittedNumbers.Length == 2)
+                return int.Parse(splittedNumbers[0]) + int.Parse(splittedNumbers[1]);
         }
 
-        return numbers.Contains(',') ? 3 : int.Parse(numbers);
+        return String.IsNullOrEmpty(numbers) ? 0 : int.Parse(numbers);
     }
 }

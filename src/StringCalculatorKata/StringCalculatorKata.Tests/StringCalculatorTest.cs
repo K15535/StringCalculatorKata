@@ -48,4 +48,12 @@ public class StringCalculatorTest
 
         Assert.Equal(4, actual);
     }
+
+    [Fact]
+    public void Add_Should_AddMultipleNumbers()
+    {
+        var actual = StringCalculator.Add("2,2,2");
+
+        Assert.Equal(6, actual);
+    }
 }
