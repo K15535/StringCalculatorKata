@@ -4,6 +4,15 @@ public static class StringCalculator
 {
     public static int Add(string numbers)
     {
-        return String.IsNullOrEmpty(numbers) ? 0 : int.Parse(numbers);
+        var sum = 0;
+        foreach (var number in numbers)
+        {
+            if (int.TryParse(number.ToString(), out var num))
+            {
+                sum += num;
+            }
+        }
+
+        return sum;
     }
 }
