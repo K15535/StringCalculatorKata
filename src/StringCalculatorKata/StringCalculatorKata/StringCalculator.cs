@@ -4,6 +4,6 @@ public static class StringCalculator
 {
     public static int Add(string numbers)
     {
-        return 0;
+        return String.IsNullOrEmpty(numbers) ? 0 : 1;
     }
 }
