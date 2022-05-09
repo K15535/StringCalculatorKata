@@ -88,4 +88,12 @@ public class StringCalculatorTest
 
         Assert.Equal(8, actual);
     }
+
+    [Fact]
+    public void AddMultipleNumbersByChangingDelimiter_Should_Return_Sum_Bis()
+    {
+        var actual = StringCalculator.Add("//|\n3\n3|3");
+
+        Assert.Equal(9, actual);
+    }
 }
