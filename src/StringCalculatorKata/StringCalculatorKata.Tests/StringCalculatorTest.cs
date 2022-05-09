@@ -80,4 +80,12 @@ public class StringCalculatorTest
 
         Assert.Equal(8, actual);
     }
+
+    [Fact]
+    public void AddMultipleNumbersByChangingDelimiter_Should_Return_Sum()
+    {
+        var actual = StringCalculator.Add("//|\n3\n2|3");
+
+        Assert.Equal(8, actual);
+    }
 }

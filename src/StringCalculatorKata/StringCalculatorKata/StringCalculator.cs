@@ -4,10 +4,9 @@ public static class StringCalculator
 {
     public static int Add(string numbers)
     {
-        if (numbers.Contains('\n'))
-        {
-            return 7;
-        } else if (numbers.Contains(','))
+        numbers = numbers.Replace("\n", ",");
+
+        if (numbers.Contains(','))
         {
             string[] splittedNumbers = numbers.Split(',');
 
