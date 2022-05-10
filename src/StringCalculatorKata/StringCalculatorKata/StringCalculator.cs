@@ -4,7 +4,7 @@ public static class StringCalculator
 {
     public static int Add(string numbers)
     {
-        string delimiter = ",";
+        var delimiter = ",";
 
         if (string.IsNullOrEmpty(numbers))
             return 0;
